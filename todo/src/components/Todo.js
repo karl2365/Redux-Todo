@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addNewTodo, toggleTodo } from '../actions';
+import './components.css';
 
 
 class Todo extends React.Component {
@@ -27,12 +28,12 @@ class Todo extends React.Component {
     render(){
         
         return(
-            <div>
+            <div className='listContainer'>
 
                 {this.props.todos.map((todo, index) => (
-                    <p onClick={e => this.toggleTodo(e, index)} key={index}>{todo.value}&nbsp;&nbsp;{todo.completed && <strong>Completed</strong>}</p>
+                    <p onClick={e => this.toggleTodo(e, index)} key={index}>{todo.value}&nbsp;&nbsp;{todo.completed && <span className='completed'>Completed</span>}</p>
                 ))}
-                <input type='text' value={this.state.newTodo} onChange={this.handleChanges} placeholder='New Todo' />
+                <input type='text' value={this.state.newTodo} onChange={this.handleChanges} placeholder='New Todo' required />
                 <button onClick={this.addTodo}>Add Todo</button>
 
             </div>
