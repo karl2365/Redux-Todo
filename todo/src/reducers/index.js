@@ -1,4 +1,4 @@
-import { ADD_NEW_TODO, TOGGLE_TODO } from "../actions";
+import { ADD_NEW_TODO, TOGGLE_TODO, DELETE_TODO } from "../actions";
 
 const initialState = {
     todos: [
@@ -34,6 +34,13 @@ export const reducer = (state = initialState, action) => {
                     }
                 })
             }
+        case DELETE_TODO:
+
+            return{
+                ...state,
+                todos: state.todos.filter(todo => todo !== state.todos[action.payload] )
+            }
+            
         default:
             return state;
     }
