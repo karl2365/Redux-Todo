@@ -48,6 +48,9 @@ form {
     width: 100%;
     align-items: center;
 }
+.listItem p:hover{
+    cursor: pointer;
+}
 .listItem button{
     width: 40px;
     height: 40px;
