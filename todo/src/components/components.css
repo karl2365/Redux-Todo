@@ -1,0 +1,58 @@
+.listContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 75%;
+    align-items: flex-start;
+    margin: 25px 0 0 25px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.completed {
+    color: #3399cc;
+    font-weight: 800;
+    font-family: cursive, sans-serif;
+}
+
+.listContainer input {
+    outline: none;
+    font-size: 1.3rem;
+    border: 1px solid #3399cc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.listContainer input:focus{
+    border: 2px solid red;
+}
+
+.listContainer button {
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 5px;
+    background: #3399cc;
+    color: white;
+    width: 50%
+}
+.listContainer button:hover {
+    color: #1177aa;
+    background: #dddddd;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.listItem {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.listItem p:hover{
+    cursor: pointer;
+}
+.listItem button{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
